@@ -1,0 +1,120 @@
+Berkeley 61A - Brain Harvey SICP
+
+# Textbook
+## Foreword
+
+Program: focus on the creation, execution and study of programs written in a dialect of Lisp (Scheme)
+
+Each computer program is a model of the mind
+
+Unlike predicate calculus, as programs get larger and more complex, the adequacy, consistency and correctness of the specifications become open to doubt. Formal arguments seldom accompany large programs. Because large programs grow from small ones, we must use standard program structures (idioms) of whose correctness we have become sure. Conversely, because writing large programs is taxing, we are stimulated to invent new methods of reducing the mass.
+
+Unlike programs, computers must obey physics because of electron transmission, heat, space, etc. Hardware operates at a level more primitive than we care to program. Studying the abstract models, the processes that transform Lisp programs to 'machine' programs, gives us insight into the organizational programs associated with programming arbitrary models. The behavior of the smallest physical switch is modeled by quantum mechanics described by differential equations whose behavior is captured by numerical approximations in computer programs executing on computers composed of ... 
+
+Algorithm: a precise mathematical function such as sorting, finding maximum, determining primality, or finding the square root. We know about the time and data storage requirements of algorithms. You must try to improve the performance of algorithms and know idioms well.
+
+## Preface
+
+Programs must be written for people to read, and only incidentally for machines to execute. The essential material to be addressed by a subject at this level is not the syntax of particular language constructs, nor clever algorithms, but rather the techniques used to control the complexity of large software systems.
+
+
+Goals: a feel for the elements of style and the aesthetics of programming. Command of the major techniques for controlling complexity. Reading a 50-page long program. What not to read, and what does not need to be understood. Secure about modifying a program, retaining the spirit and style of the original author.
+
+Complexity is controlled by building abstractions that hide detail when appropriate and establish conventional interfaces.
+
+The computer revolution is a revolution in what we think and how to express it. 
+Procedural epistemology - the study of the structure of knowledge from an imperative point of view, as opposed to a more declarative point of view by mathematics. 
+Math provides a framework for "what is," and computation of "how to." 
+
+
+
+
+# Lectures
+
+## L01 Functional Programming
+
+Language: Scheme
+
+Infix notation: `3+4`
+Prefix notation: 
+Postfix notation:
+And all around the operand notation for others, such as `\sqrt x`
+
+Because there are so many, they may not work together
+
+Scheme uses prefix notation
+
+`+ 6 8`
+14
+
+`(+)`
+0
+
+`(*)`
+1
+
+Identity operators
+
+Cannot call division without an argument
+
+`+` without parenthesis is just the function
+
+If you want an expression whose value is the plus symbol, you use a single-quote/apostrophe '+'
+
+e.g. 'hello'
+
+Can also nest them (composition of functions):
+
+`(+ (* 3 7) (* 10 10))`
+> 121
+
+Not all functions are functions of numbers
+
+`(first 'hello')`
+> h
+
+`last 'hello'
+
+butfirst 'hello'
+> ello
+
+butlast 'hello'
+> hell
+
+bf 'hello'
+> ello
+
+(word 'now' 'here')
+> nowhere
+
+`(sentence 'now' 'here')`
+> now here
+
+(bf (`the fool on the hill)`)
+> fool on the hill
+
+`(first (butfirst `work on`)
+...
+
+variable naming:
+
+`(define pi 3.141592653589)`
+
+`(* pi 5 5)`
+>78.53981
+
+Functions (aka procedures):
+
+`(define (square x) 
+	(* x x))`
+> square
+
+\n is treated as \br 
+
+(square (* 2 3)) 
+
+
+`(define hello (+ 2 3))`
+`hello`
+> 5
+
