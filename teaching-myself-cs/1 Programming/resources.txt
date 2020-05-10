@@ -9,3 +9,9 @@ Homepage: http://wla.berkeley.edu/~cs61a/sp11/
 Homework solutions:
  - sicp wiki: http://sicp.org.ua/sicp/
  - Solutions from summer 2011 (same homework and the old ones were not published): http://wla.berkeley.edu/~cs61a/su11/solutions/
+
+scheme homepage
+http://inst.eecs.berkeley.edu/~scheme/
+
+scheme IDE
+https://repl.it/languages/scheme
