@@ -84,7 +84,7 @@ butlast 'hello'
 bf 'hello'
 > ello
 
-(word 'now' 'here')
+(word 'now 'here)
 > nowhere
 
 `(sentence 'now' 'here')`
@@ -117,4 +117,51 @@ Functions (aka procedures):
 `(define hello (+ 2 3))`
 `hello`
 > 5
+
+note: must install `simple.scm` 
+
+> (define (plural wd) 
+	(word wd 's))
+
+appends 's' to a word to make it plural
+
+you use 'wd' because you want to have a different name than 'word' which is used in the function
+
+> (plural 'fly)
+flys
+
+wrong?
+
+> (define (plural wd)
+	(if (equal? (last wd) 'y)
+		(word (bl wd) `ies)
+		(word wd 's)))
+
+predicate function: function that returns T/F
+
+no distinction between char and 1-length str in this class (words and sentences only), but ref manual is different
+
+but then...
+
+> (plural 'boy)
+boies
+
+use `item` to find a character in the middle of word. index starts at 1
+
+pig latin program:
+
+define (pigl wd)
+	if (pl-done? wd)
+	(word wd 'ay)
+	(pigl (word (bf wd) (first wd)))))
+
+(define (pl-done? wd)
+		(vowel? (first wd)))
+
+(define (vowel? letter)
+	(member? letter '(a e i o u)))
+
+recursion: function calls itself.
+
+## L02 Functional Programming
 
